@@ -1,0 +1,187 @@
+:root {
+  --hero-section-img: url("images/Firstborn-banner.webp");
+  --hero-section-promo: yellow;
+  --hero-section-button: purple;
+  --hero-section-text: rgb(247, 247, 247);
+  --gallery-label-text: white;
+  --gallery-btn-background: red;
+  --products-background-color: grey;
+  --product-discount-label: pink;
+  --product-wrapper-background: cyan;
+  --product-wrapper-purchase-background: khaki;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+img {
+  border-radius: 5px;
+}
+header,
+section {
+  margin: 1rem auto;
+}
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  background-image: var(--hero-section-img);
+  background-position: center;
+  width: 80%;
+  height: 25rem;
+  border-radius: 5px;
+  position: relative;
+}
+.title-tag {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  color: var(--hero-section-text);
+  text-shadow: 1px 0 10px rgb(245, 5, 5);
+}
+.promo-tag {
+  background-color: var(--hero-section-promo);
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.hero-btn {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--hero-section-button);
+  color: var(--gallery-label-text);
+}
+@media (max-width: 768px) {
+  .title-tag {
+    top: 4rem;
+  }
+}
+/* ==================== GALLERY SECTION ==================== */
+.mini-gallery {
+  width: 80%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+  margin: 0 auto;
+}
+.img-wrapper {
+  margin: 0;
+  width: 30%;
+  position: relative;
+}
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% -0.05%;
+}
+.img-gallery-label {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 1rem;
+  color: var(--gallery-label-text);
+}
+.img-gallery-label h2 {
+  max-inline-size: 10rem;
+  text-wrap: wrap;
+}
+.img-gallery-label-btn {
+  background-color: var(--gallery-btn-background);
+  padding: 0.4rem 0.3rem;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .mini-gallery {
+    height: auto;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .img-wrapper {
+    width: 100%;
+    height: 15rem;
+  }
+}
+/* ==================== PRODUCTS SECTION ==================== */
+.products-overview {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--products-background-color);
+}
+.card-wrapper {
+  width: 30%;
+}
+.card-img-wrapper {
+  position: relative;
+  height: 20rem;
+}
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -0.05% 0%;
+}
+.sale-promo {
+  background-color: var(--hero-section-promo);
+  color: var(--hero-section-button);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-discount-label {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  background-color: var(--product-discount-label);
+}
+.card-text-wrapper h3 {
+  font-weight: bold;
+}
+.card-text-wrapper {
+  background-color: var(--product-wrapper-background);
+  padding: 1rem;
+}
+.card-purchase-details-wrapper {
+  background-color: var(--product-wrapper-purchase-background);
+  padding: 1rem;
+}
+.card-purchase-details-box {
+  display: flex;
+  align-items: baseline;
+}
+.card-purchase-details-btn {
+  padding: 0.8rem 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.card-purchase-details-additional-text {
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  .products-overview {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card-wrapper {
+    width: 100%;
+  }
+}
